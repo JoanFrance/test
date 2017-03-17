@@ -15,13 +15,31 @@ n=1
 
 x0=x1=x2=x3=x4=x5=x6=5
 
+#Initialisations des coordonées pour le plaçage des jetons 
+L0=72    
+L1=215
+L2=358
+L3=501
+L4=644
+L5=786
+L6=930
+
+H0=687
+H1=687
+H2=687
+H3=687
+H4=687
+H5=687
+H6=687
 
 def rajout0():
-    global x0,M,n
+    global x0,M,n,H0,L0
     #je recup les coordonnes en fonction de y et x je place n dans la colonne y pour le joueur n)
     M[x0,0]=n
     x0=x0-1
     print(M)
+    Canevas.create_image(L0,H0,image=jeton) #Permet de placer l'image du jeton aux coordonnées données ci-dessus
+    H0=H0-124.5 #Permet de placer les jetons les uns au dessus des autres
     
 def rajout1():
     global x1,M,n
