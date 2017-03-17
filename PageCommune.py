@@ -1,5 +1,6 @@
 from numpy import*
 from tkinter import*
+####creation de la matrice
 def init(n,p):
     return(zeros([n,p]))
 
