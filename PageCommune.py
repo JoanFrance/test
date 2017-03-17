@@ -1,5 +1,10 @@
 from numpy import*
 from tkinter import*
+
+
+
+
+
 ####creation de la matrice
 def init(n,p):
     return(zeros([n,p]))
@@ -118,7 +123,9 @@ BoutonColonne6.pack(side=LEFT,padx=50,pady=5)
 #BoutonReset.pack(side=TOP,padx=5,pady=5)
 
 
-
 Mafenetre.mainloop()
 
 print(M)
+###fin creation matrice
+
+
