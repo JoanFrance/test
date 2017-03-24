@@ -151,6 +151,14 @@ BoutonColonne5.pack(side=LEFT,padx=50,pady=5)
 BoutonColonne6=Button(Mafenetre,text='Placer7',command=rajout6)
 BoutonColonne6.pack(side=LEFT,padx=50,pady=5)
 
+
+
+
+
+        Mafenetre.mainloop()
+
+print(M)
+###fin creation matrice
 #Fonction recherche victoire
 
 
@@ -200,40 +208,5 @@ def diagonale_bas_gauche(x,y):
 
 
 
-
-
-#Partie détection de victoire d'un des joueurs
-##Joueur Rouge:   #valeur jeton rouge = 1
-def victoire_rouge(i,k):
-    if M[i,k]==1 and M[i+1,k+1]==1 and M[i+2,k+2]==1 and M[i+3,k+3]==1:
-        return("le joueur rouge a gagné la partie")
-    if M[i+3,k]==1 and M[i+2,k+1]==1 and M[i+1,k+2]==1 and M[i,k+3]==1 :
-        return("le joueur rouge a gagné la partie")
-    if M[i,k]==1 and M[i,k+1]==1 and M[i,k+2]==1 and M[i,k+3]==1 :
-        return("le joueur rouge a gagné la partie")
-    if M[i,k]==1 and M[i,k+1]==1 and M[i,k+2]==1 and M[i,k+3]==1 :
-        return("le joueur rouge a gagné la partie")
-
-##Joueur Jaune:
-def victoire_jaune(i,k):
-    if M[i,k]==1 and M[i+1,k+1]==1 and M[i+2,k+2]==1 and M[i+3,k+3]==1:
-        return("le joueur jaune a gagné la partie")
-    if M[i+3,k]==1 and M[i+2,k+1]==1 and M[i+1,k+2]==1 and M[i,k+3]==1 :
-        return("le joueur jaune a gagné la partie")
-    if M[i,k]==1 and M[i,k+1]==1 and M[i,k+2]==1 and M[i,k+3]==1 :
-        return("le joueur jaune a gagné la partie")
-    if M[i,k]==1 and M[i,k+1]==1 and M[i,k+2]==1 and M[i,k+3]==1 :
-        return("le joueur jaune a gagné la partie")    
-        
-        
-
-
-
-
-
-Mafenetre.mainloop()
-
-print(M)
-###fin creation matrice
 
 
