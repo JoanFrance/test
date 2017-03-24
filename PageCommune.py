@@ -42,47 +42,59 @@ def rajout0():
     H0=H0-124.5 #Permet de placer les jetons les uns au dessus des autres
     
 def rajout1():
-    global x1,M,n
+    global x1,M,n,H1,L1
     #je recup les coordonnes en fonction de y et x je place n dans la colonne y pour le joueur n)
     M[x1,1]=n
     x1=x1-1
     print(M)
+    Canevas.create_image(L1,H1,image=jeton) #Permet de placer l'image du jeton aux coordonnées données ci-dessus
+    H1=H1-124.5 #Permet de placer les jetons les uns au dessus des autres
 
 def rajout2():
-    global x2,M,n
+    global x2,M,n,H2,L2
     #je recup les coordonnes en fonction de y et x je place n dans la colonne y pour le joueur n)
     M[x2,2]=n
     x2=x2-1
     print(M)
-
+    Canevas.create_image(L2,H2,image=jeton) #Permet de placer l'image du jeton aux coordonnées données ci-dessus
+    H2=H2-124.5 #Permet de placer les jetons les uns au dessus des autres
+    
 def rajout3():
-    global x3,M,n
+    global x3,M,n,H3,L3
     #je recup les coordonnes en fonction de y et x je place n dans la colonne y pour le joueur n)
     M[x3,3]=n
     x3=x3-1
     print(M)
+    Canevas.create_image(L3,H3,image=jeton) #Permet de placer l'image du jeton aux coordonnées données ci-dessus
+    H3=H3-124.5 #Permet de placer les jetons les uns au dessus des autres
+
     
 def rajout4():
-    global x4,M,n
+    global x4,M,n,H4,L4
     #je recup les coordonnes en fonction de y et x je place n dans la colonne y pour le joueur n)
     M[x4,4]=n
     x4=x4-1
     print(M)
+    Canevas.create_image(L4,H4,image=jeton) #Permet de placer l'image du jeton aux coordonnées données ci-dessus
+    H4=H4-124.5 #Permet de placer les jetons les uns au dessus des autres
 
 def rajout5():
-    global x5,M,n
+    global x5,M,n,H5,L5
     #je recup les coordonnes en fonction de y et x je place n dans la colonne y pour le joueur n)
     M[x5,5]=n
     x5=x5-1
     print(M)
+    Canevas.create_image(L5,H5,image=jeton) #Permet de placer l'image du jeton aux coordonnées données ci-dessus
+    H5=H5-124.5 #Permet de placer les jetons les uns au dessus des autres
 
 def rajout6():
-    global x6,M,n
+    global x6,M,n,H6,L6
     #je recup les coordonnes en fonction de y et x je place n dans la colonne y pour le joueur n)
     M[x6,6]=n
     x6=x6-1
-    print(M)    
-
+    print(M)
+    Canevas.create_image(L6,H6,image=jeton) #Permet de placer l'image du jeton aux coordonnées données ci-dessus
+    H6=H6-124.5 #Permet de placer les jetons les uns au dessus des autres
 
 
 ###creation de la fentre principale
@@ -90,6 +102,11 @@ def rajout6():
 
 Mafenetre=Tk()
 Mafenetre.title('puissance 4')
+
+photo=PhotoImage(file="grille.GIF")
+jeton = PhotoImage(file="jetonjaune.GIF")
+Largeur = 1500
+Hauteur = 750
 
 photo=PhotoImage(file="grille.GIF")
 Largeur = 1500
@@ -134,42 +151,6 @@ BoutonColonne5.pack(side=LEFT,padx=50,pady=5)
 BoutonColonne6=Button(Mafenetre,text='Placer7',command=rajout6)
 BoutonColonne6.pack(side=LEFT,padx=50,pady=5)
 
-#Partie recherche par balayage de matrice
-  ##Valeur jeton vide  =0
-  ##Valeur jeton rouge =2
-  ##Valeur jeton jaune =1
-
-def horizontal(x,y):
-    for x in range(3):
-        for y in range(5):
-            if M(x,y)==1 and M(x,y+1)==1 and M(x,y+2)==1 and M(x,y+3)==1 :
-                return("rouge a gagné") ##Completer par une animation ? + son ?
-            if M(x,y)==2 and M(x,y+1)==2 and M(x,y+2)==2 and M(x,y+3)==2 :
-                return("jaune a gagné")
-            
-def vertical(x,y):
-    for x in range(6):
-        for y in range(2):
-            if M(x,y)==1 and M(x,y+1)==1 and M(x,y+2)==1 and M(x,y+3)==1 :
-                return("rouge a gagné")
-            if M(x,y)==2 and M(x,y+1)==2 and M(x,y+2)==2 and M(x,y+3)==2 :
-                return("jaune a gagné")
-
-def diagonale_bas_droite(x,y):
-    for x in range(3):
-        for y in range(2):
-            if M(x,y)==1 and M(x+1,y+1)==1 and M(x+2,y+2)==1 and M(x+3,y+3)==1 :
-                return("rouge a gagné")
-            if M(x,y)==2 and M(x+1,y+1)==2 and M(x+2,y+2)==2 and M(x+3,y+3)==2 :
-                return("jaune a gagné")
-            
-def diagonale_bas_gauche(x,y):
-    for x in range(3) :
-        for y in range(2):
-            if M(x+3,y)==1 and M(x+2,y+1)==1 and M(x+1,y+2)==1 and M(x,y+3)==1 :
-                return("rouge a gagné")
-            if M(x+3,y)==2 and M(x+2,y+1)==2 and M(x+1,y+2)==2 and M(x,y+3)==2 :
-                return("jaune a gagné")
 
 
 #creation d'un bouton Reset
