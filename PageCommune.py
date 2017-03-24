@@ -134,6 +134,42 @@ BoutonColonne5.pack(side=LEFT,padx=50,pady=5)
 BoutonColonne6=Button(Mafenetre,text='Placer7',command=rajout6)
 BoutonColonne6.pack(side=LEFT,padx=50,pady=5)
 
+#Partie recherche par balayage de matrice
+  ##Valeur jeton vide  =0
+  ##Valeur jeton rouge =2
+  ##Valeur jeton jaune =1
+
+def horizontal(x,y):
+    for x in range(3):
+        for y in range(5):
+            if M(x,y)==1 and M(x,y+1)==1 and M(x,y+2)==1 and M(x,y+3)==1 :
+                return("rouge a gagné") ##Completer par une animation ? + son ?
+            if M(x,y)==2 and M(x,y+1)==2 and M(x,y+2)==2 and M(x,y+3)==2 :
+                return("jaune a gagné")
+            
+def vertical(x,y):
+    for x in range(6):
+        for y in range(2):
+            if M(x,y)==1 and M(x,y+1)==1 and M(x,y+2)==1 and M(x,y+3)==1 :
+                return("rouge a gagné")
+            if M(x,y)==2 and M(x,y+1)==2 and M(x,y+2)==2 and M(x,y+3)==2 :
+                return("jaune a gagné")
+
+def diagonale_bas_droite(x,y):
+    for x in range(3):
+        for y in range(2):
+            if M(x,y)==1 and M(x+1,y+1)==1 and M(x+2,y+2)==1 and M(x+3,y+3)==1 :
+                return("rouge a gagné")
+            if M(x,y)==2 and M(x+1,y+1)==2 and M(x+2,y+2)==2 and M(x+3,y+3)==2 :
+                return("jaune a gagné")
+            
+def diagonale_bas_gauche(x,y):
+    for x in range(3) :
+        for y in range(2):
+            if M(x+3,y)==1 and M(x+2,y+1)==1 and M(x+1,y+2)==1 and M(x,y+3)==1 :
+                return("rouge a gagné")
+            if M(x+3,y)==2 and M(x+2,y+1)==2 and M(x+1,y+2)==2 and M(x,y+3)==2 :
+                return("jaune a gagné")
 
 
 #creation d'un bouton Reset
