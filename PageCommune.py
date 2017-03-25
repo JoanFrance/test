@@ -242,25 +242,27 @@ def Victoire():
     def vertical():
         for x in range(6):
             for y in range(2):
-                if M[x,y]==1 and M[x,y+1]==1 and M(x,y+2)==1 and M(x,y+3)==1 :
+                if M[x,y]==1 and M[x,y+1]==1 and  M[x,y+2]==1 and  M[x,y+3]==1 :
                     return("rouge a gagné")
-                if M[x,y]==2 and M[x,y+1]==2 and M(x,y+2)==2 and M(x,y+3)==2 :
+                if M[x,y]==2 and M[x,y+1]==2 and  M[x,y+2]==2 and  M[x,y+3]==2 :
                     return("jaune a gagné")
 
     def diagonale_bas_droite():
         for x in range(3):
             for y in range(2):
-                if M[x,y]==1 and M(x+1,y+1)==1 and M(x+2,y+2)==1 and M(x+3,y+3)==1 :
+                if M[x,y]==1 and M[x+1,y+1]==1 and M[x+2,y+2]==1 and M[x+3,y+3]==1 :
                    return("rouge a gagné")
-                if M[x,y]==2 and M(x+1,y+1)==2 and M(x+2,y+2)==2 and M(x+3,y+3)==2 :
+                if M[x,y]==2 and M[x+1,y+1]==2 and M[x+2,y+2]==2 and M[x+3,y+3]==2 :
                    return("jaune a gagné")
             
     def diagonale_bas_gauche():
         for x in range(3) :
             for y in range(2):
-                if M(x+3,y)==1 and M(x+2,y+1)==1 and M(x+1,y+2)==1 and M(x,y+3)==1 :
-                    return("rouge a gagné)
-
+                if M[x+3,y]==1 and M[x+2,y+1]==1 and M[x+1,y+2]==1 and M[x,y+3]==1 :
+                    return("rouge a gagné")
+                
+                if M[x+3,y]==2 and M[x+2,y+1]==2 and M[x+1,y+2]==2 and M[x,y+3]==2 :
+                    return("jaune a gagné")
 
 
 
