@@ -5,6 +5,7 @@ from tkinter import*
 
 
 
+
 ####creation de la matrice
 def init(n,p):
     return(zeros([n,p]))
@@ -35,6 +36,40 @@ H6=687
 #initialisation du compteur du joueur
 c=0
 n=1
+#algo victoire
+##
+##def horizontal():
+##    for y in range(3):
+##        for x in range(5,-1,-1):
+##            if M[x,y]==1 and M[x,y+1]==1 and M[x,y+2]==1 and M[x,y+3]==1 :
+##                return("rouge a gagné") ##Completer par une animation ? + son ?
+##            if M[x,y]==2 and M[x,y+1]==2 and M[x,y+2]==2 and M[x,y+3]==2 :
+##                return("jaune a gagné")
+##            
+##    def vertical():
+##        for x in range(6):
+##            for y in range(2):
+##                if M[x,y]==1 and M[x,y+1]==1 and  M[x,y+2]==1 and  M[x,y+3]==1 :
+##                    return("rouge a gagné")
+##                if M[x,y]==2 and M[x,y+1]==2 and  M[x,y+2]==2 and  M[x,y+3]==2 :
+##                    return("jaune a gagné")
+##
+##    def diagonale_bas_droite():
+##        for x in range(3):
+##            for y in range(2):
+##                if M[x,y]==1 and M[x+1,y+1]==1 and M[x+2,y+2]==1 and M[x+3,y+3]==1 :
+##                   return("rouge a gagné")
+##                if M[x,y]==2 and M[x+1,y+1]==2 and M[x+2,y+2]==2 and M[x+3,y+3]==2 :
+##                   return("jaune a gagné")
+##            
+##    def diagonale_bas_gauche():
+##        for x in range(3) :
+##            for y in range(2):
+##                if M[x+3,y]==1 and M[x+2,y+1]==1 and M[x+1,y+2]==1 and M[x,y+3]==1 :
+##                    return("rouge a gagné")
+##                
+##                if M[x+3,y]==2 and M[x+2,y+1]==2 and M[x+1,y+2]==2 and M[x,y+3]==2 :
+##                    return("jaune a gagné")
 
 def rajout0():
     global x0,M,n,H0,L0,c
@@ -51,6 +86,7 @@ def rajout0():
     print(M)
     c=c+1
     H0=H0-124.5 #Permet de placer les jetons les uns au dessus des autres
+    print(horizontal(),vertical(),diagonale_bas_droite()diagonale_bas_gauche())
 
 def rajout1():
     global x1,M,n,H1,L1,c
@@ -66,6 +102,8 @@ def rajout1():
     print(M)
     c=c+1
     H1=H1-124.5 #Permet de placer les jetons les uns au dessus des autres
+    print(horizontal(),vertical(),diagonale_bas_droite()diagonale_bas_gauche())
+    
 
 def rajout2():
     global x2,M,n,H2,L2,c
@@ -83,6 +121,7 @@ def rajout2():
     print(M)
     c=c+1
     H2=H2-124.5 #Permet de placer les jetons les uns au dessus des autres
+    print(horizontal(),vertical(),diagonale_bas_droite()diagonale_bas_gauche())
     
 def rajout3():
     global x3,M,n,H3,L3,c
@@ -100,6 +139,7 @@ def rajout3():
     print(M)
     c=c+1
     H3=H3-124.5 #Permet de placer les jetons les uns au dessus des autres
+    print(horizontal(),vertical(),diagonale_bas_droite()diagonale_bas_gauche())
 
     
 def rajout4():
@@ -118,6 +158,7 @@ def rajout4():
     print(M)
     c=c+1
     H4=H4-124.5 #Permet de placer les jetons les uns au dessus des autres
+    print(horizontal(),vertical(),diagonale_bas_droite()diagonale_bas_gauche())
 
 def rajout5():
     global x5,M,n,H5,L5,c
@@ -135,6 +176,7 @@ def rajout5():
     print(M)
     c=c+1
     H5=H5-124.5 #Permet de placer les jetons les uns au dessus des autres
+    print(horizontal(),vertical(),diagonale_bas_droite()diagonale_bas_gauche())
 
 def rajout6():
     global x6,M,n,H6,L6,c
@@ -152,6 +194,7 @@ def rajout6():
     print(M)
     c=c+1
     H6=H6-124.5 #Permet de placer les jetons les uns au dessus des autres
+    print(horizontal(),vertical(),diagonale_bas_droite()diagonale_bas_gauche())
 
 
 ###creation de la fentre principale
@@ -161,6 +204,7 @@ Mafenetre=Tk()
 Mafenetre.title('puissance 4')
 
 photo=PhotoImage(file="grille.GIF")
+
 jetonj = PhotoImage(file="jetonjaune.GIF")
 jetonr = PhotoImage(file="jetonrouge.GIF")
 Largeur = 1500
@@ -220,50 +264,6 @@ Mafenetre.mainloop()
 
 print(M)
 ###fin creation matrice
-
-#Fonction recherche victoire
-
-
-#Partie recherche par balayage de matrice
-##Valeur jeton vide  =0
-##Valeur jeton rouge =2
-##Valeur jeton jaune =1
-
-def Victoire():
-
-    def horizontal():
-        for x in range(3):
-            for y in range(5):
-                if M[x,y]==1 and M[x,y+1]==1 and M[x,y+2]==1 and M[x,y+3]==1 :
-                    return("rouge a gagné") ##Completer par une animation ? + son ?
-                if M[x,y]==2 and M[x,y+1]==2 and M[x,y+2]==2 and M[x,y+3]==2 :
-                    return("jaune a gagné")
-            
-    def vertical():
-        for x in range(6):
-            for y in range(2):
-                if M[x,y]==1 and M[x,y+1]==1 and  M[x,y+2]==1 and  M[x,y+3]==1 :
-                    return("rouge a gagné")
-                if M[x,y]==2 and M[x,y+1]==2 and  M[x,y+2]==2 and  M[x,y+3]==2 :
-                    return("jaune a gagné")
-
-    def diagonale_bas_droite():
-        for x in range(3):
-            for y in range(2):
-                if M[x,y]==1 and M[x+1,y+1]==1 and M[x+2,y+2]==1 and M[x+3,y+3]==1 :
-                   return("rouge a gagné")
-                if M[x,y]==2 and M[x+1,y+1]==2 and M[x+2,y+2]==2 and M[x+3,y+3]==2 :
-                   return("jaune a gagné")
-            
-    def diagonale_bas_gauche():
-        for x in range(3) :
-            for y in range(2):
-                if M[x+3,y]==1 and M[x+2,y+1]==1 and M[x+1,y+2]==1 and M[x,y+3]==1 :
-                    return("rouge a gagné")
-                
-                if M[x+3,y]==2 and M[x+2,y+1]==2 and M[x+1,y+2]==2 and M[x,y+3]==2 :
-                    return("jaune a gagné")
-
 
 
 
