@@ -71,126 +71,141 @@ n=1
 def rajout0():
     global x0,M,n,H0,L0,c
     #je recup les coordonnes en fonction de y et x je place n dans la colonne y pour le joueur n)
-    
-    if c%2==0:
-         Canevas.create_image(L0,H0,image=jetonj) #Permet de placer l'image du jeton aux coordonnées données ci-dessus
-         n=2
+    if x0>=0:
+        if c%2==0:
+             Canevas.create_image(L0,H0,image=jetonj) #Permet de placer l'image du jeton aux coordonnées données ci-dessus
+             n=2
+        else:
+             Canevas.create_image(L0,H0,image=jetonr) #Permet de placer l'image du jeton aux coordonnées données ci-dessus
+             n=1
+        M[x0,0]=n
+        x0=x0-1
+        print(M)
+        c=c+1
+        H0=H0-124.5 #Permet de placer les jetons les uns au dessus des autres
+        print(horizontal(),vertical(),diagonale_bas_droite(),diagonale_bas_gauche())
     else:
-         Canevas.create_image(L0,H0,image=jetonr) #Permet de placer l'image du jeton aux coordonnées données ci-dessus
-         n=1
-    M[x0,0]=n
-    x0=x0-1
-    print(M)
-    c=c+1
-    H0=H0-124.5 #Permet de placer les jetons les uns au dessus des autres
-    print(horizontal(),vertical(),diagonale_bas_droite(),diagonale_bas_gauche())
+        print('impossible')
 
 def rajout1():
     global x1,M,n,H1,L1,c
     #je recup les coordonnes en fonction de y et x je place n dans la colonne y pour le joueur n)
-    if c%2==0:
-         Canevas.create_image(L1,H1,image=jetonj) #Permet de placer l'image du jeton aux coordonnées données ci-dessus
-         n=2
+    if x1>=0:
+        if c%2==0:
+             Canevas.create_image(L1,H1,image=jetonj) #Permet de placer l'image du jeton aux coordonnées données ci-dessus
+             n=2
+        else:
+             Canevas.create_image(L1,H1,image=jetonr) #Permet de placer l'image du jeton aux coordonnées données ci-dessus
+             n=1
+        M[x1,1]=n
+        x1=x1-1
+        print(M)
+        c=c+1
+        H1=H1-124.5 #Permet de placer les jetons les uns au dessus des autres
+        print(horizontal(),vertical(),diagonale_bas_droite(),diagonale_bas_gauche())
     else:
-         Canevas.create_image(L1,H1,image=jetonr) #Permet de placer l'image du jeton aux coordonnées données ci-dessus
-         n=1
-    M[x1,1]=n
-    x1=x1-1
-    print(M)
-    c=c+1
-    H1=H1-124.5 #Permet de placer les jetons les uns au dessus des autres
-    print(horizontal(),vertical(),diagonale_bas_droite(),diagonale_bas_gauche())
+        print('impossible')
+    
 
 def rajout2():
     global x2,M,n,H2,L2,c
     #je recup les coordonnes en fonction de y et x je place n dans la colonne y pour le joueur n)
-    
-    if c%2==0:
-         Canevas.create_image(L2,H2,image=jetonj) #Permet de placer l'image du jeton aux coordonnées données ci-dessus
-         n=2
-    else:
-         Canevas.create_image(L2,H2,image=jetonr) #Permet de placer l'image du jeton aux coordonnées données ci-dessus
-         n=1
+    if x2>=0:
+        if c%2==0:
+             Canevas.create_image(L2,H2,image=jetonj) #Permet de placer l'image du jeton aux coordonnées données ci-dessus
+             n=2
+        else:
+             Canevas.create_image(L2,H2,image=jetonr) #Permet de placer l'image du jeton aux coordonnées données ci-dessus
+             n=1
 
-    M[x2,2]=n
-    x2=x2-1
-    print(M)
-    c=c+1
-    H2=H2-124.5 #Permet de placer les jetons les uns au dessus des autres
-    print(horizontal(),vertical(),diagonale_bas_droite(),diagonale_bas_gauche())
+        M[x2,2]=n
+        x2=x2-1
+        print(M)
+        c=c+1
+        H2=H2-124.5 #Permet de placer les jetons les uns au dessus des autres
+        print(horizontal(),vertical(),diagonale_bas_droite(),diagonale_bas_gauche())
+    else:
+        print('impossible')
     
 def rajout3():
     global x3,M,n,H3,L3,c
     #je recup les coordonnes en fonction de y et x je place n dans la colonne y pour le joueur n)
-    
-    if c%2==0:
-         Canevas.create_image(L3,H3,image=jetonj) #Permet de placer l'image du jeton aux coordonnées données ci-dessus
-         n=2
-    else:
-         Canevas.create_image(L3,H3,image=jetonr) #Permet de placer l'image du jeton aux coordonnées données ci-dessus
-         n=1
+    if x3>=0:
+        if c%2==0:
+             Canevas.create_image(L3,H3,image=jetonj) #Permet de placer l'image du jeton aux coordonnées données ci-dessus
+             n=2
+        else:
+             Canevas.create_image(L3,H3,image=jetonr) #Permet de placer l'image du jeton aux coordonnées données ci-dessus
+             n=1
 
-    M[x3,3]=n
-    x3=x3-1
-    print(M)
-    c=c+1
-    H3=H3-124.5 #Permet de placer les jetons les uns au dessus des autres
-    print(horizontal(),vertical(),diagonale_bas_droite(),diagonale_bas_gauche())
+        M[x3,3]=n
+        x3=x3-1
+        print(M)
+        c=c+1
+        H3=H3-124.5 #Permet de placer les jetons les uns au dessus des autres
+        print(horizontal(),vertical(),diagonale_bas_droite(),diagonale_bas_gauche())
+    else:
+        print('impossible')
 
     
 def rajout4():
     global x4,M,n,H4,L4,c
     #je recup les coordonnes en fonction de y et x je place n dans la colonne y pour le joueur n)
-    
-    if c%2==0:
-         Canevas.create_image(L4,H4,image=jetonj) #Permet de placer l'image du jeton aux coordonnées données ci-dessus
-         n=2
+    if x4>=0:
+        if c%2==0:
+            Canevas.create_image(L4,H4,image=jetonj) #Permet de placer l'image du jeton aux coordonnées données ci-dessus
+            n=2
+        else:
+            Canevas.create_image(L4,H4,image=jetonr) #Permet de placer l'image du jeton aux coordonnées données ci-dessus
+            n=1
+        M[x4,4]=n
+        x4=x4-1
+        print(M)
+        c=c+1
+        H4=H4-124.5 #Permet de placer les jetons les uns au dessus des autres
+        print(horizontal(),vertical(),diagonale_bas_droite(),diagonale_bas_gauche())
     else:
-         Canevas.create_image(L4,H4,image=jetonr) #Permet de placer l'image du jeton aux coordonnées données ci-dessus
-         n=1
-
-    M[x4,4]=n
-    x4=x4-1
-    print(M)
-    c=c+1
-    H4=H4-124.5 #Permet de placer les jetons les uns au dessus des autres
-    print(horizontal(),vertical(),diagonale_bas_droite(),diagonale_bas_gauche())
+        print('impossible')
+        
 
 def rajout5():
     global x5,M,n,H5,L5,c
     #je recup les coordonnes en fonction de y et x je place n dans la colonne y pour le joueur n)
-    
-    if c%2==0:
-         Canevas.create_image(L5,H5,image=jetonj) #Permet de placer l'image du jeton aux coordonnées données ci-dessus
-         n=2
+    if x5>=0:
+        if c%2==0:
+            Canevas.create_image(L5,H5,image=jetonj) #Permet de placer l'image du jeton aux coordonnées données ci-dessus
+            n=2
+        else:
+            Canevas.create_image(L5,H5,image=jetonr) #Permet de placer l'image du jeton aux coordonnées données ci-dessus
+            n=1
+        M[x5,5]=n
+        x5=x5-1
+        print(M)
+        c=c+1
+        H5=H5-124.5 #Permet de placer les jetons les uns au dessus des autres
+        print(horizontal(),vertical(),diagonale_bas_droite(),diagonale_bas_gauche())
     else:
-         Canevas.create_image(L5,H5,image=jetonr) #Permet de placer l'image du jeton aux coordonnées données ci-dessus
-         n=1
-
-    M[x5,5]=n
-    x5=x5-1
-    print(M)
-    c=c+1
-    H5=H5-124.5 #Permet de placer les jetons les uns au dessus des autres
-    print(horizontal(),vertical(),diagonale_bas_droite(),diagonale_bas_gauche())
+        print('impossible')
 
 def rajout6():
     global x6,M,n,H6,L6,c
     #je recup les coordonnes en fonction de y et x je place n dans la colonne y pour le joueur n)
-    
-    if c%2==0:
-         Canevas.create_image(L6,H6,image=jetonj) #Permet de placer l'image du jeton aux coordonnées données ci-dessus
-         n=2
+    if x6>=0:
+        if c%2==0:
+            Canevas.create_image(L6,H6,image=jetonj) #Permet de placer l'image du jeton aux coordonnées données ci-dessus
+            n=2
+        else:
+            Canevas.create_image(L6,H6,image=jetonr) #Permet de placer l'image du jeton aux coordonnées données ci-dessus
+            n=1
+        M[x6,6]=n
+        x6=x6-1
+        print(M)
+        c=c+1
+        H6=H6-124.5 #Permet de placer les jetons les uns au dessus des autres
+        
+        print(horizontal(),vertical(),diagonale_bas_droite(),diagonale_bas_gauche())
     else:
-         Canevas.create_image(L6,H6,image=jetonr) #Permet de placer l'image du jeton aux coordonnées données ci-dessus
-         n=1
-
-    M[x6,6]=n
-    x6=x6-1
-    print(M)
-    c=c+1
-    H6=H6-124.5 #Permet de placer les jetons les uns au dessus des autres
-    print(horizontal(),vertical(),diagonale_bas_droite(),diagonale_bas_gauche())
+        print('impossible')
 
 
 ###creation de la fentre principale
@@ -202,9 +217,6 @@ Mafenetre.title('puissance 4')
 photo=PhotoImage(file="grille.GIF")
 jetonj = PhotoImage(file="jetonjaune.GIF")
 jetonr = PhotoImage(file="jetonrouge.GIF")
-Largeur = 1500
-Hauteur = 750
-
 photo=PhotoImage(file="grille.GIF")
 Largeur = 1500
 Hauteur = 750
@@ -260,13 +272,10 @@ Mafenetre.mainloop()
 print(M)
 ###fin creation matrice
 
-#Fonction recherche victoire
 
 
-#Partie recherche par balayage de matrice
-##Valeur jeton vide  =0
-##Valeur jeton rouge =2
-##Valeur jeton jaune =1
+
+
 
 
 
