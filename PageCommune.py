@@ -7,34 +7,41 @@ def horizontal():
     for y in range(3):
         for x in range(5,-1,-1):
             if M[x,y]==1 and M[x,y+1]==1 and M[x,y+2]==1 and M[x,y+3]==1 :
+                Canevas.create_image(0,0,anchor=NW,image=victoirerouge)
                 return("rouge a gagné") ##Completer par une animation ? + son ?
             if M[x,y]==2 and M[x,y+1]==2 and M[x,y+2]==2 and M[x,y+3]==2 :
                 return("jaune a gagné")
+                Canevas.create_image(0,0,anchor=NW,image=victoirejaune)
             
 def vertical():
     for y in range(6):
         for x in range(2,-1,-1):
             if M[x,y]==1 and M[x+1,y]==1 and  M[x+2,y]==1 and  M[x+3,y]==1 :
                 return("rouge a gagné")
+                Canevas.create_image(0,0,anchor=NW,image=victoirerouge)
             if M[x,y]==2 and M[x+1,y]==2 and  M[x+2,y]==2 and  M[x+3,y]==2 :
                 return("jaune a gagné")
+                Canevas.create_image(0,0,anchor=NW,image=victoirejaune)
 
 def diagonale_bas_droite():
     for y in range(3,-1,-1):
         for x in range(2,-1,-1):
             if M[x,y]==1 and M[x+1,y+1]==1 and M[x+2,y+2]==1 and M[x+3,y+3]==1 :
                 return("rouge a gagné")
+                Canevas.create_image(0,0,anchor=NW,image=victoirerouge)
             if M[x,y]==2 and M[x+1,y+1]==2 and M[x+2,y+2]==2 and M[x+3,y+3]==2 :
                 return("jaune a gagné")
+                Canevas.create_image(0,0,anchor=NW,image=victoirejaune)
             
 def diagonale_bas_gauche():
     for y in range(3,-1,-1) :
         for x in range(2,-1,-1):
             if M[x+3,y]==1 and M[x+2,y+1]==1 and M[x+1,y+2]==1 and M[x,y+3]==1 :
                 return("rouge a gagné")
-                
+                Canevas.create_image(0,0,anchor=NW,image=victoirerouge)
             if M[x+3,y]==2 and M[x+2,y+1]==2 and M[x+1,y+2]==2 and M[x,y+3]==2 :
                 return("jaune a gagné")
+                Canevas.create_image(0,0,anchor=NW,image=victoirejaune)
 
 
 ####creation de la matrice
@@ -218,6 +225,8 @@ photo=PhotoImage(file="grille.GIF")
 jetonj = PhotoImage(file="jetonjaune.GIF")
 jetonr = PhotoImage(file="jetonrouge.GIF")
 photo=PhotoImage(file="grille.GIF")
+victoirerouge =PhotoImage(file="victoirerouge.GIF")
+victoirejaune =PhotoImage(file="victoirejaune.GIF")
 Largeur = 1500
 Hauteur = 750
 
