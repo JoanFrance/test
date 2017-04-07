@@ -82,7 +82,7 @@ def rajout0():
         x0=x0-1
         print(M)
         c=c+1
-        H0=H0-124.5 #Permet de placer les jetons les uns au dessus des autres
+        H0=H0-125 #Permet de placer les jetons les uns au dessus des autres
         print(horizontal(),vertical(),diagonale_bas_droite(),diagonale_bas_gauche())
     else:
         print('impossible')
@@ -101,7 +101,7 @@ def rajout1():
         x1=x1-1
         print(M)
         c=c+1
-        H1=H1-124.5 #Permet de placer les jetons les uns au dessus des autres
+        H1=H1-125 #Permet de placer les jetons les uns au dessus des autres
         print(horizontal(),vertical(),diagonale_bas_droite(),diagonale_bas_gauche())
     else:
         print('impossible')
@@ -122,7 +122,7 @@ def rajout2():
         x2=x2-1
         print(M)
         c=c+1
-        H2=H2-124.5 #Permet de placer les jetons les uns au dessus des autres
+        H2=H2-125 #Permet de placer les jetons les uns au dessus des autres
         print(horizontal(),vertical(),diagonale_bas_droite(),diagonale_bas_gauche())
     else:
         print('impossible')
@@ -142,7 +142,7 @@ def rajout3():
         x3=x3-1
         print(M)
         c=c+1
-        H3=H3-124.5 #Permet de placer les jetons les uns au dessus des autres
+        H3=H3-125 #Permet de placer les jetons les uns au dessus des autres
         print(horizontal(),vertical(),diagonale_bas_droite(),diagonale_bas_gauche())
     else:
         print('impossible')
@@ -162,7 +162,7 @@ def rajout4():
         x4=x4-1
         print(M)
         c=c+1
-        H4=H4-124.5 #Permet de placer les jetons les uns au dessus des autres
+        H4=H4-125 #Permet de placer les jetons les uns au dessus des autres
         print(horizontal(),vertical(),diagonale_bas_droite(),diagonale_bas_gauche())
     else:
         print('impossible')
@@ -182,7 +182,7 @@ def rajout5():
         x5=x5-1
         print(M)
         c=c+1
-        H5=H5-124.5 #Permet de placer les jetons les uns au dessus des autres
+        H5=H5-125 #Permet de placer les jetons les uns au dessus des autres
         print(horizontal(),vertical(),diagonale_bas_droite(),diagonale_bas_gauche())
     else:
         print('impossible')
@@ -201,7 +201,7 @@ def rajout6():
         x6=x6-1
         print(M)
         c=c+1
-        H6=H6-124.5 #Permet de placer les jetons les uns au dessus des autres
+        H6=H6-125 #Permet de placer les jetons les uns au dessus des autres
         
         print(horizontal(),vertical(),diagonale_bas_droite(),diagonale_bas_gauche())
     else:
