@@ -102,6 +102,8 @@ def rajout0():
         print(horizontal(),vertical(),diagonale_bas_droite(),diagonale_bas_gauche())
     else:
         print('impossible')
+        Canevas.create_image(0,0,anchor=NW,image=erreur)
+        
 
 def rajout1():
     global x1,M,n,H1,L1,c
@@ -121,6 +123,7 @@ def rajout1():
         print(horizontal(),vertical(),diagonale_bas_droite(),diagonale_bas_gauche())
     else:
         print('impossible')
+        Canevas.create_image(0,0,anchor=NW,image=erreur)
     
 
 def rajout2():
@@ -142,6 +145,7 @@ def rajout2():
         print(horizontal(),vertical(),diagonale_bas_droite(),diagonale_bas_gauche())
     else:
         print('impossible')
+        Canevas.create_image(0,0,anchor=NW,image=erreur)
     
 def rajout3():
     global x3,M,n,H3,L3,c
@@ -162,6 +166,7 @@ def rajout3():
         print(horizontal(),vertical(),diagonale_bas_droite(),diagonale_bas_gauche())
     else:
         print('impossible')
+        Canevas.create_image(0,0,anchor=NW,image=erreur)
 
     
 def rajout4():
@@ -182,6 +187,7 @@ def rajout4():
         print(horizontal(),vertical(),diagonale_bas_droite(),diagonale_bas_gauche())
     else:
         print('impossible')
+        Canevas.create_image(0,0,anchor=NW,image=erreur)
         
 
 def rajout5():
@@ -202,6 +208,7 @@ def rajout5():
         print(horizontal(),vertical(),diagonale_bas_droite(),diagonale_bas_gauche())
     else:
         print('impossible')
+        Canevas.create_image(0,0,anchor=NW,image=erreur)
 
 def rajout6():
     global x6,M,n,H6,L6,c
@@ -222,6 +229,7 @@ def rajout6():
         print(horizontal(),vertical(),diagonale_bas_droite(),diagonale_bas_gauche())
     else:
         print('impossible')
+        Canevas.create_image(0,0,anchor=NW,image=erreur)
 
 
 ###creation de la fentre principale
@@ -236,6 +244,7 @@ jetonr = PhotoImage(file="jetonrouge.GIF")
 photo=PhotoImage(file="grille.GIF")
 vrouge =PhotoImage(file="victoirerouge.GIF")
 vjaune =PhotoImage(file="victoirejaune.GIF")
+erreur =PhotoImage(file="erreur.GIF")
 Largeur = 1500
 Hauteur = 750
 
