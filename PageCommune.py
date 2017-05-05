@@ -52,7 +52,7 @@ def diagonale_bas_gauche():
                 #winsound.PlaySound('C:\\Users\\Christiane\\Desktop\\p4\\applaudissements.wav',winsound.SND_FILENAME)
                 return("jaune a gagné")
 
-
+#def rejouer
 def rejouer():
     global Canevas
     Canevas.delete(ALL)
@@ -295,6 +295,7 @@ BoutonColonne5.pack(side=LEFT,padx=50,pady=5)
 BoutonColonne6=Button(Mafenetre,text='Placer7',command=rajout6)
 BoutonColonne6.pack(side=LEFT,padx=50,pady=5)
 
+#creation d'un bouton pour rejouer
 BoutonRejouer=Button(Mafenetre, text='rejouer',command=rejouer)
 BoutonRejouer.pack(side=LEFT,padx=70,pady=50)
 
