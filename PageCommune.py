@@ -53,6 +53,13 @@ def diagonale_bas_gauche():
                 return("jaune a gagné")
 
 
+def rejouer():
+    global Canevas
+    Canevas.delete(ALL)
+    item=Canevas.create_image(0,0,anchor=NW, image=photo)
+    Canevas.pack()
+
+
 ####creation de la matrice
 def init(n,p):
     return(zeros([n,p]))
@@ -232,6 +239,8 @@ def rajout6():
         Canevas.create_image(0,0,anchor=NW,image=erreur)
 
 
+
+    
 ###creation de la fentre principale
 
 
@@ -251,7 +260,6 @@ Hauteur = 750
 Canevas = Canvas(Mafenetre, width = Largeur, height= Hauteur)
 item=Canevas.create_image(0,0,anchor=NW, image=photo)
 Canevas.pack()
-
 
 #creation d'un bouton pour la colonne 0
 BoutonColonne0=Button(Mafenetre,text='Placer1',command=rajout0)
@@ -287,11 +295,8 @@ BoutonColonne5.pack(side=LEFT,padx=50,pady=5)
 BoutonColonne6=Button(Mafenetre,text='Placer7',command=rajout6)
 BoutonColonne6.pack(side=LEFT,padx=50,pady=5)
 
-
-
-#creation d'un bouton Reset
-#BoutonReset=Button(Mafenetre,text='Recommencer',command=rajout)
-#BoutonReset.pack(side=TOP,padx=5,pady=5)
+BoutonRejouer=Button(Mafenetre, text='rejouer',command=rejouer)
+BoutonRejouer.pack(side=LEFT,padx=70,pady=50)
 
 
 Mafenetre.mainloop()
