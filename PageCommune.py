@@ -54,10 +54,30 @@ def diagonale_bas_gauche():
 
 #def rejouer
 def rejouer():
-    global Canevas
+    global Canevas,L0,L1,L2,L3,L4,L5,L6,H0,H1,H2,H3,H4,H5,H6,x0,x1,x2,x3,x4,x6,c,n,M
     Canevas.delete(ALL)
     item=Canevas.create_image(0,0,anchor=NW, image=photo)
     Canevas.pack()
+    L0=72    
+    L1=215
+    L2=358
+    L3=501
+    L4=644
+    L5=786
+    L6=930
+
+    H0=687
+    H1=687
+    H2=687
+    H3=687
+    H4=687
+    H5=687
+    H6=687
+    x0=x1=x2=x3=x4=x5=x6=5
+    c=0
+    n=1
+    M=init(6,7)
+    
 
 
 ####creation de la matrice
