@@ -1,0 +1,101 @@
+body
+{
+    background: url('background.jpg');
+	font-family: 'Impact';
+    color: black;
+}
+#page
+{
+    width: 900px;
+    margin: auto;}
+header
+{   border-style: solid;
+    border-width: 5px;
+    background: url('bordure.jpg');
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+	
+}
+#titre
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#logo
+{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+#logo img
+{
+    width: 59px;
+    height: 60px;
+}
+
+header h1
+{
+    font-family: 'Impact';
+    font-size: 2.5em;
+    font-weight: normal;
+    margin: 0 0 0 10px;
+}
+
+header h2
+{
+    font-family: 'Impact';
+    font-size: 1.1em;
+    margin-top: 10px;
+	margin-left:10px;
+    font-weight: normal;
+}
+
+
+nav.bannière ul
+{	
+    list-style-type:none;
+    display: flex;
+}
+
+nav.bannière li
+{
+    margin-right: 50px;
+	margin-left: 50px;
+	font-size: 1.5em;
+}
+
+#texte
+{   font-size:1.5em;
+	font-family:'Comic Sans MS';
+	background: url('fond.jpg');
+	margin:center;
+	padding-left:2%;
+	padding-bottom:80%;
+	padding-top:2%;
+	border-style: solid;
+    border-width: 5px;
+	
+}
+#jeu{
+	padding-top:5%;
+}
+nav.liens ul{
+	font-size:1.5em;
+	font-family: 'Impact';
+	background: url('fond.jpg');
+	list-style-type:none;
+    display: block;
+	border-style: solid;
+    border-width: 5px;
+	position: absolute;
+    left: 0%;
+    top:29.5%;
+	padding-bottom:40%;
+	padding-right:10%;
+	
+	
+}
+
