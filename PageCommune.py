@@ -260,7 +260,7 @@ def rajout6():
 
 
 Mafenetre=Tk()
-Mafenetre.title('puissance 4')
+Mafenetre.title('Puissance 4')
 
 photo=PhotoImage(file="grille.GIF")
 jetonj = PhotoImage(file="jetonjaune.GIF")
