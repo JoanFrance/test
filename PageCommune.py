@@ -266,7 +266,7 @@ photo=PhotoImage(file="grille.GIF")
 vrouge =PhotoImage(file="victoirerouge.GIF")
 vjaune =PhotoImage(file="victoirejaune.GIF")
 erreur =PhotoImage(file="erreur.GIF")
-Largeur = 1500
+Largeur = 1200
 Hauteur = 750
 
 Canevas = Canvas(Mafenetre, width = Largeur, height= Hauteur)
@@ -274,42 +274,42 @@ item=Canevas.create_image(0,0,anchor=NW, image=photo)
 Canevas.pack()
 
 #creation d'un bouton pour la colonne 0
-BoutonColonne0=Button(Mafenetre,text='Placer1',command=rajout0)
+BoutonColonne0=Button(Mafenetre,bg='magenta',activebackground='cyan',text='Placer1',command=rajout0)
 BoutonColonne0.pack(side=LEFT,padx=50,pady=5)
 
 
 #creation d'un bouton pour la colonne 1
-BoutonColonne1=Button(Mafenetre,text='Placer2',command=rajout1)
-BoutonColonne1.pack(side=LEFT,padx=45,pady=5)
+BoutonColonne1=Button(Mafenetre,bg='magenta',activebackground='cyan',text='Placer2',command=rajout1)
+BoutonColonne1.pack(side=LEFT,padx=50,pady=5)
 
 
 #creation d'un bouton pour la colonne 2
-BoutonColonne2=Button(Mafenetre,text='Placer3',command=rajout2)
+BoutonColonne2=Button(Mafenetre,bg='magenta',activebackground='cyan',text='Placer3',command=rajout2)
 BoutonColonne2.pack(side=LEFT,padx=43,pady=5)
 
 
 #creation d'un bouton pour la colonne 3
-BoutonColonne3=Button(Mafenetre,text='Placer4',command=rajout3)
+BoutonColonne3=Button(Mafenetre,bg='magenta',activebackground='cyan',text='Placer4',command=rajout3)
 BoutonColonne3.pack(side=LEFT,padx=55,pady=5)
 
 
 #creation d'un bouton pour la colonne 4
-BoutonColonne4=Button(Mafenetre,text='Placer5',command=rajout4)
+BoutonColonne4=Button(Mafenetre,bg='magenta',activebackground='cyan',text='Placer5',command=rajout4)
 BoutonColonne4.pack(side=LEFT,padx=40,pady=5)
 
 
 #creation d'un bouton pour la colonne 5
-BoutonColonne5=Button(Mafenetre,text='Placer6',command=rajout5)
+BoutonColonne5=Button(Mafenetre,bg='magenta',activebackground='cyan',text='Placer6',command=rajout5)
 BoutonColonne5.pack(side=LEFT,padx=50,pady=5)
 
 
 #creation d'un bouton pour la colonne 6
-BoutonColonne6=Button(Mafenetre,text='Placer7',command=rajout6)
+BoutonColonne6=Button(Mafenetre,bg='magenta',activebackground='cyan',text='Placer7',command=rajout6)
 BoutonColonne6.pack(side=LEFT,padx=50,pady=5)
 
 #creation d'un bouton pour rejouer
-BoutonRejouer=Button(Mafenetre, text='rejouer',command=rejouer)
-BoutonRejouer.pack(side=LEFT,padx=70,pady=50)
+BoutonRejouer=Button(Mafenetre,bg='green',activebackground='cyan',font='Elephant',height=5,width=15, text='Rejouer',command=rejouer)
+BoutonRejouer.pack(side="top",padx=0,pady=0,)
 
 
 Mafenetre.mainloop()
