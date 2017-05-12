@@ -1,6 +1,6 @@
 from numpy import*
 from tkinter import*
-from winsound import*
+
 
 
 #def victoire
@@ -9,11 +9,9 @@ def horizontal():
         for x in range(5,-1,-1):
             if M[x,y]==1 and M[x,y+1]==1 and M[x,y+2]==1 and M[x,y+3]==1 :
                 Canevas.create_image(0,0,anchor=NW,image=vrouge)
-                #winsound.PlaySound('C:\\Users\\Christiane\\Desktop\\p4\\applaudissements.wav',winsound.SND_FILENAME)
                 return("rouge a gagné") ##Completer par une animation ? + son ?
             if M[x,y]==2 and M[x,y+1]==2 and M[x,y+2]==2 and M[x,y+3]==2 :
                 Canevas.create_image(0,0,anchor=NW,image=vjaune)
-                #winsound.PlaySound('C:\\Users\\Christiane\\Desktop\\p4\\applaudissements.wav',winsound.SND_FILENAME)
                 return("jaune a gagné")
             
 def vertical():
@@ -21,11 +19,9 @@ def vertical():
         for x in range(2,-1,-1):
             if M[x,y]==1 and M[x+1,y]==1 and  M[x+2,y]==1 and  M[x+3,y]==1 :
                 Canevas.create_image(0,0,anchor=NW,image=vrouge)
-                #winsound.PlaySound('C:\\Users\\Christiane\\Desktop\\p4\\applaudissements.wav',winsound.SND_FILENAME)
                 return("rouge a gagné")
             if M[x,y]==2 and M[x+1,y]==2 and  M[x+2,y]==2 and  M[x+3,y]==2 :
                 Canevas.create_image(0,0,anchor=NW,image=vjaune)
-                #winsound.PlaySound('C:\\Users\\Christiane\\Desktop\\p4\\applaudissements.wav',winsound.SND_FILENAME)
                 return("jaune a gagné")
 
 def diagonale_bas_droite():
@@ -33,11 +29,9 @@ def diagonale_bas_droite():
         for x in range(2,-1,-1):
             if M[x,y]==1 and M[x+1,y+1]==1 and M[x+2,y+2]==1 and M[x+3,y+3]==1 :
                 Canevas.create_image(0,0,anchor=NW,image=vrouge)
-                #winsound.PlaySound('C:\\Users\\Christiane\\Desktop\\p4\\applaudissements.wav',winsound.SND_FILENAME)
                 return("rouge a gagné")
             if M[x,y]==2 and M[x+1,y+1]==2 and M[x+2,y+2]==2 and M[x+3,y+3]==2 :
                 Canevas.create_image(0,0,anchor=NW,image=vjaune)
-                #winsound.PlaySound('C:\\Users\\Christiane\\Desktop\\p4\\applaudissements.wav',winsound.SND_FILENAME)
                 return("jaune a gagné")
             
 def diagonale_bas_gauche():
@@ -45,16 +39,14 @@ def diagonale_bas_gauche():
         for x in range(2,-1,-1):
             if M[x+3,y]==1 and M[x+2,y+1]==1 and M[x+1,y+2]==1 and M[x,y+3]==1 :
                 Canevas.create_image(0,0,anchor=NW,image=vrouge)
-                #winsound.PlaySound('C:\\Users\\Christiane\\Desktop\\p4\\applaudissements.wav',winsound.SND_FILENAME)
                 return("rouge a gagné")
             if M[x+3,y]==2 and M[x+2,y+1]==2 and M[x+1,y+2]==2 and M[x,y+3]==2 :
                 Canevas.create_image(0,0,anchor=NW,image=vjaune)
-                #winsound.PlaySound('C:\\Users\\Christiane\\Desktop\\p4\\applaudissements.wav',winsound.SND_FILENAME)
                 return("jaune a gagné")
 
 #def rejouer
 def rejouer():
-    global Canevas,L0,L1,L2,L3,L4,L5,L6,H0,H1,H2,H3,H4,H5,H6,x0,x1,x2,x3,x4,x6,c,n,M
+    global Canevas,L0,L1,L2,L3,L4,L5,L6,H0,H1,H2,H3,H4,H5,H6,x0,x1,x2,x3,x4,x5,x6,c,n,M
     Canevas.delete(ALL)
     item=Canevas.create_image(0,0,anchor=NW, image=photo)
     Canevas.pack()
