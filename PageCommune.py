@@ -102,6 +102,8 @@ H6=687
 #initialisation du compteur du joueur
 c=0
 n=1
+def eff():
+    Canevas.delete('erreur')
 
 def rajout0():
     global x0,M,n,H0,L0,c
@@ -121,7 +123,8 @@ def rajout0():
         print(horizontal(),vertical(),diagonale_bas_droite(),diagonale_bas_gauche())
     else:
         print('impossible')
-        Canevas.create_image(0,0,anchor=NW,image=erreur)
+        Canevas.create_image(0,0,anchor=NW,image=erreur,tags='erreur')
+        Mafenetre.after(2000,eff)
         
 
 def rajout1():
@@ -142,7 +145,8 @@ def rajout1():
         print(horizontal(),vertical(),diagonale_bas_droite(),diagonale_bas_gauche())
     else:
         print('impossible')
-        Canevas.create_image(0,0,anchor=NW,image=erreur)
+        Canevas.create_image(0,0,anchor=NW,image=erreur,tags='erreur')
+        Mafenetre.after(2000,eff)
     
 
 def rajout2():
@@ -164,8 +168,8 @@ def rajout2():
         print(horizontal(),vertical(),diagonale_bas_droite(),diagonale_bas_gauche())
     else:
         print('impossible')
-        Canevas.create_image(0,0,anchor=NW,image=erreur)
-    
+        Canevas.create_image(0,0,anchor=NW,image=erreur,tags='erreur')
+        Mafenetre.after(2000,eff)
 def rajout3():
     global x3,M,n,H3,L3,c
     #je recup les coordonnes en fonction de y et x je place n dans la colonne y pour le joueur n)
@@ -185,9 +189,8 @@ def rajout3():
         print(horizontal(),vertical(),diagonale_bas_droite(),diagonale_bas_gauche())
     else:
         print('impossible')
-        Canevas.create_image(0,0,anchor=NW,image=erreur)
-
-    
+        Canevas.create_image(0,0,anchor=NW,image=erreur,tags='erreur')
+        Mafenetre.after(2000,eff)
 def rajout4():
     global x4,M,n,H4,L4,c
     #je recup les coordonnes en fonction de y et x je place n dans la colonne y pour le joueur n)
@@ -206,8 +209,8 @@ def rajout4():
         print(horizontal(),vertical(),diagonale_bas_droite(),diagonale_bas_gauche())
     else:
         print('impossible')
-        Canevas.create_image(0,0,anchor=NW,image=erreur)
-        
+        Canevas.create_image(0,0,anchor=NW,image=erreur,tags='erreur')
+        Mafenetre.after(2000,eff)
 
 def rajout5():
     global x5,M,n,H5,L5,c
@@ -227,8 +230,8 @@ def rajout5():
         print(horizontal(),vertical(),diagonale_bas_droite(),diagonale_bas_gauche())
     else:
         print('impossible')
-        Canevas.create_image(0,0,anchor=NW,image=erreur)
-
+        Canevas.create_image(0,0,anchor=NW,image=erreur,tags='erreur')
+        Mafenetre.after(2000,eff)
 def rajout6():
     global x6,M,n,H6,L6,c
     #je recup les coordonnes en fonction de y et x je place n dans la colonne y pour le joueur n)
@@ -248,8 +251,8 @@ def rajout6():
         print(horizontal(),vertical(),diagonale_bas_droite(),diagonale_bas_gauche())
     else:
         print('impossible')
-        Canevas.create_image(0,0,anchor=NW,image=erreur)
-
+        Canevas.create_image(0,0,anchor=NW,image=erreur,tags='erreur')
+        Mafenetre.after(2000,eff)
 
 
     
